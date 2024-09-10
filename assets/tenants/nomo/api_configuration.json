@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "timeout": 120,
+  "retry": 3,
+  "Dev": {
+    "dgApiBaseUrl": "https://uat-dgsvc.heytorus.com/",
+    "mfApiBaseUrl": "https://uat-publicsvc.heytorus.com/mutualfund/api",
+    "authApiBaseUrl": "https://uat-publicsvc.heytorus.com/users/api",
+    "esApiBaseUrl": "https://elastic:oE4QEqoZtjSpZX07IHmBiepy@eb9edd9570f44fe79a3d1f9bbab4193e.us-central1.gcp.cloud.es.io",
+    "razorpayKey": "rzp_test_loCJ5Uyor7m5gU",
+    "bankDebitCardKey": "89555EED0B07495D00A6C11789D40E1D"
+  },
+  "UAT": {
+    "dgApiBaseUrl": "https://uat-publicsvc.heytorus.com/",
+    "mfApiBaseUrl": "https://uat-publicsvc.heytorus.com/mutualfund/api",
+    "authApiBaseUrl": "https://uat-publicsvc.heytorus.com/users/api",
+    "esApiBaseUrl": "https://elastic:oE4QEqoZtjSpZX07IHmBiepy@eb9edd9570f44fe79a3d1f9bbab4193e.us-central1.gcp.cloud.es.io",
+    "razorpayKey": "",
+    "bankDebitCardKey": "89555EED0B07495D00A6C11789D40E1D"
+  },
+  "PROD": {
+    "dgApiBaseUrl": "https://dgsvc.heytorus.com/",
+    "mfApiBaseUrl": "https://uat-publicsvc.heytorus.com/mutualfund/api",
+    "authApiBaseUrl": "https://publicsvc.heytorus.com/users/api",
+    "esApiBaseUrl": "https://elastic:oE4QEqoZtjSpZX07IHmBiepy@eb9edd9570f44fe79a3d1f9bbab4193e.us-central1.gcp.cloud.es.io",
+    "razorpayKey": "",
+    "bankDebitCardKey": "EC2CEC2277BFD9F0102E8241B917C185"
+  }
+}

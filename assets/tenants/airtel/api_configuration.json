@@ -1,0 +1,14 @@
+{
+  "version": "1",
+  "timeout": 120,
+  "retry": 3,
+  "Development": {
+    "hostUrl": "http://111.92.105.40:1052/api/"
+  },
+  "QA": {
+    "hostUrl": "http://121.242.120.106:9001/api/"
+  },
+  "UAT": {
+    "hostUrl": "https://icnrmuat.idbibank.co.in/api/"
+  }
+}

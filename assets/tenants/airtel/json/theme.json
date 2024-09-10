@@ -1,0 +1,126 @@
+{
+  "primary": "#00836C",
+  "error": "#D40000",
+  "onError": "#b10000",
+  "onPrimary": "#FFFFFF",
+  "secondary": "#F58220",
+  "onSecondary": "#000000",
+  "background": "#FFFFFF",
+  "brightness": "#08194F",
+  "onBackground": "#FFFFFF",
+  "surface": "#FFFFFF",
+  "onSurface": "9B9B9B",
+  "primarySwatch": "#08194F",
+  "outline": "#E3E1E1",
+  "tertiary": "#29292999",
+  "appBar": {
+    "backgroundColor": "#0000ffff",
+    "foregroundColor": "#ffffff",
+    "titleTextStyle": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 20,
+      "color": "#000000"
+    }
+  },
+  "elevatedButtonStyle": {
+    "color": "#00836C"
+  },
+  "outlinedButtonStyle": {
+    "color": "#FFFFFF"
+  },
+  "tabBar": {
+    "indicatorWeight": 3,
+    "unselectedLabelColor": "#FF9E9E9E",
+    "indicatorColor": "#FF035BA3",
+    "labelColor": "FF035BA3"
+  },
+  "textThemeStyle": {
+    "lightSmall": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 12,
+      "color": "#9B9B9B"
+    },
+    "bodyLarge": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 14,
+      "color": "#000000"
+    },
+    "bodyMedium": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 15,
+      "color": "#000000"
+    },
+    "bodySmall": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 11,
+      "color": "#000000"
+    },
+    "labelLarge": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 18,
+      "color": "#000000"
+    },
+    "labelMedium": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 14,
+      "color": "#000000"
+    },
+    "labelSmall": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 14,
+      "color": "#4A4A4A"
+    },
+    "lightMedium": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 20,
+      "color": "#4A4A4A"
+    },
+    "lightBig": {
+      "fontFamily": "Roboto-Medium",
+      "fontSize": 18,
+      "color": "#FFFFFF"
+    },
+    "darkSmall": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 14,
+      "color": "#000000"
+    },
+    "darkMedium": {
+      "fontFamily": "Roboto-Medium",
+      "fontSize": 16,
+      "color": "#000000"
+    },
+    "darkBig": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 18,
+      "color": "#000000"
+    },
+    "headlineBig": {
+      "fontFamily": "Roboto-Bold",
+      "fontSize": 24,
+      "color": "#000000"
+    },
+    "headlineMedium": {
+      "fontFamily": "Roboto-Medium",
+      "fontSize": 22,
+      "color": "#000000"
+    },
+    "headlineSmall": {
+      "fontFamily": "Roboto-Medium",
+      "fontSize": 15,
+      "color": "#000000"
+    },
+    "titleLarge": {
+      "fontFamily": "Roboto-Bold",
+      "fontSize": 28,
+      "color": "#FFFFFF",
+      "letterSpacing": 1.0
+    },
+    "titleMedium": {
+      "fontFamily": "Roboto-Bold",
+      "fontSize": 22,
+      "color": "#FFFFFF",
+      "letterSpacing": 1.0
+    }
+  }
+}
