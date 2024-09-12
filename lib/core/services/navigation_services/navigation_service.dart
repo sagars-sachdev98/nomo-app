@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nomo_app/features/dashboard/presentation/view/dashboard.view.dart';
 class NavigationService {
   NavigationService._();
 
@@ -10,7 +11,7 @@ class NavigationService {
 
   static Map<String, Widget Function(BuildContext context)> generateRoute() {
     return {
-      // SplashView.routeName: (context) => const SplashView(),
+      DashboardView.routeName: (context) =>  DashboardView(),
       // VideoListView.routeName: (context) => const VideoListView(),
       // HlsVideoPlayerView.routeName: (context) => const HlsVideoPlayerView()
     };

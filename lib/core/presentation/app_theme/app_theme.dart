@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nomo_app/core/services/flavor_services/flavor_config.dart';
 import 'app_theme_model.dart';
 
@@ -46,6 +47,7 @@ class AppTheme {
         ),
         backgroundColor: HexColor(appThemesColors.appBar.backgroundColor),
         foregroundColor: HexColor(appThemesColors.appBar.foregroundColor),
+      systemOverlayStyle: SystemUiOverlayStyle.dark
       ),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(

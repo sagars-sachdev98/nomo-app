@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nomo_app/core/data/extensions/assets.extensions.dart';
+import 'package:nomo_app/core/services/navigation_services/navigation_service.dart';
+import 'package:nomo_app/features/dashboard/presentation/view/dashboard.view.dart';
 
 class SplashView extends StatefulWidget {
   static String routeName = "/splash_screen";
@@ -9,13 +11,15 @@ class SplashView extends StatefulWidget {
   State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashViewState extends State<SplashView> with SingleTickerProviderStateMixin {
+class _SplashViewState extends State<SplashView>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _opacityAnimation;
   late Animation<double> _scaleAnimation;
 
   bool _isSliding = false; // Toggle to trigger sliding
-  bool _fillScreenWithColor = false; // Toggle to fill the screen with the desired color
+  bool _fillScreenWithColor =
+      false; // Toggle to fill the screen with the desired color
 
   @override
   void initState() {
@@ -41,14 +45,16 @@ class _SplashViewState extends State<SplashView> with SingleTickerProviderStateM
     _controller.forward();
 
     // Trigger the fast slide animation after the scale and fade-in complete
-    Future.delayed(const Duration(seconds: 1), () { // Slide starts at 1 second
+    Future.delayed(const Duration(seconds: 1), () {
+      // Slide starts at 1 second
       setState(() {
         _isSliding = true;
       });
     });
 
     // Fill the screen with color immediately after the slide animation
-    Future.delayed(const Duration( milliseconds: 800), () { // Color fill at 1.5 seconds
+    Future.delayed(const Duration(milliseconds: 800), () {
+      // Color fill at 1.5 seconds
       setState(() {
         _fillScreenWithColor = true;
       });
@@ -57,7 +63,9 @@ class _SplashViewState extends State<SplashView> with SingleTickerProviderStateM
     // Navigate to the next screen after 2 seconds
     Future.delayed(const Duration(seconds: 2), () {
       // You can navigate to the next screen here
-      // NavigationService.goNextFinishAll(context, VideoListView.routeName);
+      if (mounted) {
+        NavigationService.goNextFinishAll(context, DashboardView.routeName);
+      }
     });
   }
 
@@ -73,8 +81,11 @@ class _SplashViewState extends State<SplashView> with SingleTickerProviderStateM
 
     return Scaffold(
       body: AnimatedContainer(
-        duration: const Duration(milliseconds: 100), // Color transition duration
-        color: _fillScreenWithColor ?  Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onPrimary,
+        duration:
+            const Duration(milliseconds: 100), // Color transition duration
+        color: _fillScreenWithColor
+            ? Theme.of(context).colorScheme.primary
+            : Theme.of(context).colorScheme.onPrimary,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -88,9 +99,13 @@ class _SplashViewState extends State<SplashView> with SingleTickerProviderStateM
                     child: Transform.scale(
                       scale: _scaleAnimation.value,
                       child: AnimatedContainer(
-                        duration: _isSliding ? const Duration(milliseconds: 200) : Duration.zero, // Quick slide
+                        duration: _isSliding
+                            ? const Duration(milliseconds: 200)
+                            : Duration.zero, // Quick slide
                         transform: Matrix4.translationValues(
-                          _isSliding ? screenWidth : 0.0, // Slide off to the right
+                          _isSliding
+                              ? screenWidth
+                              : 0.0, // Slide off to the right
                           0.0,
                           0.0,
                         ),

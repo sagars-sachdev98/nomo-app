@@ -44,6 +44,13 @@ dependencies:
   freezed_annotation: ^2.4.4
   freezed: ^2.5.7
   equatable: ^2.0.5
+  carousel_slider: ^5.0.0
+  flutter_svg: ^2.0.10+1
+  # dot_curved_bottom_nav: ^0.0.2
+  # responsive_navigation_bar: ^5.0.2
+  # bottom_navy_bar: ^6.1.0
+  # dot_navigation_bar: ^1.0.2
+  flutter_floating_bottom_bar: ^1.2.1+1
 
 dev_dependencies:
   flutter_test:

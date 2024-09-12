@@ -3,6 +3,7 @@ import 'package:nomo_app/core/presentation/app_theme/app_theme.dart';
 import 'package:nomo_app/core/presentation/views/splash.view.dart';
 import 'package:nomo_app/core/services/flavor_services/repositories/flavor_impl.repository.dart';
 import 'package:nomo_app/core/services/flavor_services/sources/asset_flavor_impl.source.dart';
+import 'package:nomo_app/core/services/navigation_services/navigation_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.buildTheme(context),
+     
+      routes: NavigationService.generateRoute(),
       debugShowCheckedModeBanner: false,
       home: const SplashView(),
     );
