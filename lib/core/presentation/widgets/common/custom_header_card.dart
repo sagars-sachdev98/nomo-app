@@ -23,7 +23,7 @@ class CustomHeaderCard extends StatelessWidget {
         child: Align(
           alignment: Alignment.centerLeft,
           child: CustomText(title)
-              .bhm()
+              .hm()
               .textColor(Theme.of(context).colorScheme.onPrimary),
         ),
       ),

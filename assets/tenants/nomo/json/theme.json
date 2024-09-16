@@ -70,37 +70,37 @@
     },
     "lightSmall": {
       "fontFamily": "DMSans",
-      "fontSize": 12,
-      "color": "#ABABAB",
+      "fontSize": 14,
+      "color": "#7C7C7C",
       "fontWeight": "400"
     },
     "lightMedium": {
       "fontFamily": "DMSans",
-      "fontSize": 14,
-      "color": "#ABABAB",
+      "fontSize": 16,
+      "color": "#7C7C7C",
       "fontWeight": "400"
     },
     "lightBig": {
       "fontFamily": "DMSans",
-      "fontSize": 16,
-      "color": "#ABABAB",
+      "fontSize": 18,
+      "color": "#7C7C7C",
       "fontWeight": "500"
     },
     "darkSmall": {
       "fontFamily": "DMSans",
-      "fontSize": 12,
+      "fontSize": 14,
       "color": "#001317",
       "fontWeight": "400"
     },
     "darkMedium": {
       "fontFamily": "DMSans",
-      "fontSize": 14,
+      "fontSize": 16,
       "color": "#001317",
       "fontWeight": "500"
     },
     "darkBig": {
       "fontFamily": "DMSans",
-      "fontSize": 16,
+      "fontSize": 18,
       "color": "#001317",
       "fontWeight": "500"
     },
@@ -112,19 +112,19 @@
     },
     "headlineBig": {
       "fontFamily": "DMSans",
-      "fontSize": 16,
+      "fontSize": 24,
       "color": "#001317",
       "fontWeight": "700"
     },
     "headlineMedium": {
-      "fontFamily": "Roboto-Medium",
-      "fontSize": 20,
-      "color": "#000000"
+      "fontFamily": "DMSans",
+      "fontSize": 22,
+      "color": "#001317"
     },
     "headlineSmall": {
-      "fontFamily": "Roboto-Medium",
-      "fontSize": 15,
-      "color": "#000000"
+      "fontFamily": "DMSans",
+      "fontSize": 20,
+      "color": "#001317"
     },
     "titleLarge": {
       "fontFamily": "Mulish",

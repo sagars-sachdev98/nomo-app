@@ -16,6 +16,8 @@ class CustomText extends StatelessWidget {
   final AppThemeDataModel appTheme =
       AppThemeDataModel.fromJson(FlavorConfig.instance!.theme);
   TextAlign? _align;
+  TextOverflow? _overflow;
+  int? _maxLines;
   @override
   Widget build(BuildContext context) {
     return showSymbol
@@ -23,16 +25,18 @@ class CustomText extends StatelessWidget {
             "₹$text",
             style: _textStyle,
             textAlign: _align,
+            overflow: _overflow,
+            maxLines: _maxLines,
           )
         : Text(
             text,
             style: _textStyle,
             textAlign: _align,
+            overflow: _overflow,
+            maxLines: _maxLines,
           );
   }
 }
-
-
 
 extension TextExtension on CustomText {
   CustomText labelM() {
@@ -160,7 +164,18 @@ extension TextExtension on CustomText {
   }
 
   CustomText decoration(TextDecoration decoration) {
-    _textStyle = _textStyle.copyWith(decoration: decoration,decorationThickness: 2.2);
+    _textStyle =
+        _textStyle.copyWith(decoration: decoration, decorationThickness: 2.2);
+    return this;
+  }
+
+   CustomText overflow(TextOverflow textOverflow) {
+    _overflow = textOverflow;
+    return this;
+  }
+
+  CustomText maxLines(int maxLines) {
+    _maxLines = maxLines;
     return this;
   }
 
@@ -194,7 +209,7 @@ extension TextExtension on CustomText {
     return this;
   }
 
-  CustomText hl({Color? fontColor}) {
+  CustomText hb({Color? fontColor}) {
     // heading large
     _textStyle = _textStyle.copyWith(
         fontSize: _textThemeStyle.headlineBig.fontSize.toDouble(),
@@ -204,7 +219,7 @@ extension TextExtension on CustomText {
     return this;
   }
 
-  CustomText bhm() {
+  CustomText hm() {
     // black heading medium
     _textStyle = _textStyle.copyWith(
       fontSize: _textThemeStyle.headlineMedium.fontSize.toDouble(),
@@ -238,7 +253,6 @@ extension TextExtension on CustomText {
     //white medium large
     _textStyle = _textStyle.copyWith(
       fontSize: _textThemeStyle.titleMedium.fontSize.toDouble(),
-    
       color: getColorFromHex(_textThemeStyle.titleMedium.color),
       fontFamily: _textThemeStyle.titleMedium.fontFamily,
       letterSpacing: _textThemeStyle.titleMedium.letterSpacing,

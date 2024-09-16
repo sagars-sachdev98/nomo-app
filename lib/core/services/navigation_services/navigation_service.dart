@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nomo_app/features/cart/presentation/view/cart.view.dart';
 import 'package:nomo_app/features/dashboard/presentation/view/dashboard.view.dart';
+import 'package:nomo_app/features/product/product_details/presentation/view/product_details.view.dart';
+import 'package:nomo_app/features/sub_categories/presentation/widgets/sub_categories.view.dart';
+
 class NavigationService {
   NavigationService._();
 
@@ -11,7 +15,10 @@ class NavigationService {
 
   static Map<String, Widget Function(BuildContext context)> generateRoute() {
     return {
-      DashboardView.routeName: (context) =>  DashboardView(),
+      DashboardView.routeName: (context) => const DashboardView(),
+      ProductDetailsView.routeName: (context) => const ProductDetailsView(),
+      SubCategoriesView.routeName: (context) => const SubCategoriesView(),
+      CartView.routeName: (context) => const CartView()
       // VideoListView.routeName: (context) => const VideoListView(),
       // HlsVideoPlayerView.routeName: (context) => const HlsVideoPlayerView()
     };

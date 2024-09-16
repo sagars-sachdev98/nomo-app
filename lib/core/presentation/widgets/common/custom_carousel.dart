@@ -7,6 +7,7 @@ class CustomCarousel extends StatefulWidget {
   final bool enableInfiniteScroll;
   final bool autoPlay;
   final double viewportFraction;
+  final double? itemIndicatorPadding;
 
   const CustomCarousel({
     super.key,
@@ -15,6 +16,7 @@ class CustomCarousel extends StatefulWidget {
     this.enableInfiniteScroll = false,
     this.autoPlay = false,
     this.viewportFraction = 1.0,
+    this.itemIndicatorPadding = 2
   });
 
   @override
@@ -23,7 +25,8 @@ class CustomCarousel extends StatefulWidget {
 
 class _CustomCarouselState extends State<CustomCarousel> {
   int _current = 0;
-  final carousel.CarouselSliderController _controller = carousel.CarouselSliderController();
+  final carousel.CarouselSliderController _controller =
+      carousel.CarouselSliderController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +47,9 @@ class _CustomCarouselState extends State<CustomCarousel> {
             },
           ),
         ),
+         SizedBox(
+          height: widget.itemIndicatorPadding,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: widget.items.asMap().entries.map((entry) {
@@ -52,9 +58,12 @@ class _CustomCarouselState extends State<CustomCarousel> {
               child: Container(
                 width: _current == entry.key ? 28 : 12.0,
                 height: 8.0,
-                margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                 decoration: BoxDecoration(
-                  shape: _current == entry.key ? BoxShape.rectangle : BoxShape.circle,
+                  shape: _current == entry.key
+                      ? BoxShape.rectangle
+                      : BoxShape.circle,
                   borderRadius: _current == entry.key
                       ? const BorderRadius.all(Radius.circular(4))
                       : null,

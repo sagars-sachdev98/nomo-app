@@ -22,9 +22,8 @@ class AppTheme {
           ),
         ),
       ),
-      textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.black
-        ),
+      textSelectionTheme:
+          const TextSelectionThemeData(cursorColor: Colors.black),
       scaffoldBackgroundColor: const Color(0xFFF6F6F6),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -37,18 +36,17 @@ class AppTheme {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)))),
       appBarTheme: AppBarTheme(
-        titleTextStyle: TextStyle(
-          fontFamily: appThemesColors.appBar.titleTextStyle.fontFamily,
-          fontSize: double.parse(
-              appThemesColors.appBar.titleTextStyle.fontSize.toString()),
-          letterSpacing: 0.3,
-          fontWeight: FontWeight.bold,
-          color: HexColor(appThemesColors.appBar.titleTextStyle.color),
-        ),
-        backgroundColor: HexColor(appThemesColors.appBar.backgroundColor),
-        foregroundColor: HexColor(appThemesColors.appBar.foregroundColor),
-      systemOverlayStyle: SystemUiOverlayStyle.dark
-      ),
+          titleTextStyle: TextStyle(
+            fontFamily: appThemesColors.appBar.titleTextStyle.fontFamily,
+            fontSize: double.parse(
+                appThemesColors.appBar.titleTextStyle.fontSize.toString()),
+            letterSpacing: 0.3,
+            fontWeight: FontWeight.bold,
+            color: HexColor(appThemesColors.appBar.titleTextStyle.color),
+          ),
+          backgroundColor: HexColor(appThemesColors.appBar.backgroundColor),
+          foregroundColor: HexColor(appThemesColors.appBar.foregroundColor),
+          systemOverlayStyle: SystemUiOverlayStyle.dark),
       visualDensity: VisualDensity.adaptivePlatformDensity,
       textTheme: TextTheme(
         bodyLarge: TextStyle(
@@ -119,6 +117,7 @@ class AppTheme {
           color: HexColor(appThemesColors.textThemeStyle.titleMedium.color),
         ),
       ),
+      iconTheme: IconThemeData(color: HexColor(appThemesColors.primary)),
       colorScheme: ColorScheme(
           primary: HexColor(appThemesColors.primary),
           onError: HexColor(appThemesColors.onError),
